@@ -1,0 +1,47 @@
+
+<div class="inner_content"  style="margin:0px;">
+	<section class="sugerencias">
+		<div class="content">
+			<article class="bocadillo-sug">
+				<img src="images/heroe2.png" alt="">
+				<p>Estimado usuario, para navegar a través de este curso debes tener en cuenta lo siguiente: <br> <br>
+					<span></span>Utiliza el mouse para dar clic sobre cada elemento que aparecen resaltados en los diferentes escenarios. <br> <br>
+					<span></span>Ingresa ordenadamente a los contenidos y explora cada elemento que aparezca resaltado. <br> <br>
+					<span></span>Una vez hayas explorado todos los contenidos accede a las actividades de aprendizaje. Lee cuidadosamente las instrucciones para realizar la actividad con éxito. <br> <br>
+					<span></span>Para finalizar el curso debes realizar una actividad de evaluación.
+				</p>
+			</article>
+			<div class="btn-next btn right next_button2">
+				<a href="">Siguiente</a>
+			</div>
+		</div>
+	</section>
+	<!--<div class="btn left prev_button2" id="left">página anterior</div>-->
+	<div class="btn right next_button2" id="right">Siguiente página</div>
+
+
+	</div>
+<script type="text/javascript">
+	$('.prev_button2').on('click', function(e){
+		e.preventDefault();
+		if(page >= 1) {
+			page -= 1;
+			goToPage(page);
+			
+
+			document.location.hash = "pagina_" + page;
+			
+		}
+	});
+	$('.next_button2').on('click', function(e){
+		e.preventDefault();
+
+			page += 1;
+			goToPage(page);
+			
+
+			document.location.hash = "pagina_" + page;
+
+	});
+	
+</script>

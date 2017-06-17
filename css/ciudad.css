@@ -1,0 +1,85 @@
+#Parallax-content {
+   background-image: url('../images/ciudad_etb_montaje.jpg');
+   background-size: 3223px;
+   height: 100vh;
+   background-repeat: no-repeat;
+}
+body{
+   overflow: hidden;
+}
+.items{
+   width: 3223px;
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 3;
+}
+.item-sem{
+   width: 3223px;
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 2;
+}
+.item-1 {
+   position: absolute;
+   bottom: 0;
+   left: -10px;
+}
+.item-2 {
+   position: absolute;
+   top: 20px;
+   left: 540px;
+   cursor: pointer;
+}
+.item-3{
+   position: absolute;
+   top: 110px;
+   left: 990px;
+   cursor: pointer;
+}
+.item-4{
+   position: absolute;
+   bottom: 0;
+   left: 990px;
+}
+.item-5{
+   position: absolute;
+   top: 380px;
+   left: 1580px;
+   cursor: pointer;
+}
+.item-6{
+   position: absolute;
+   top: 340px;
+   right: 435px;
+   cursor: pointer;
+}
+.item-7{
+   position: absolute;
+   bottom: 0;
+   right: 360px;
+}
+.semaforo{
+   position: absolute;
+   left: 869px;
+   top: 523px;
+   width: 50px;
+}
+@media screen and (max-width: 1440px){
+   .item-1{
+      width: 16%;
+   }
+   .item-2, .item-3, .item-5, .item-6{
+      width: 7%;
+   }
+   .item-4{
+      width: 15%;
+   }
+   .item-7{
+      width: 10%;
+   }
+
+}

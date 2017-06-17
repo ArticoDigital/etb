@@ -1,0 +1,52 @@
+
+<div class="inner_content"  style="margin:0px;">
+<section class="intro">
+		<div class="content">
+			<article class="bocadillo1">
+				<h2>¡Hola!</h2>
+				<p>Bienvenidos a la ciudad ETB, </p>
+			</article>
+			<img src="images/heroe1.png" alt="">
+			<article class="bocadillo2">
+				<p>aquí encontrarás <br> un mundo de situaciones y <br> conceptos organizacionales, que <br> te ayudarán a fortalecer <br> tus competencias.</p>
+			</article>
+			<div class="btn-entrar btn right next_button2" id="right">ENTRAR.</div>
+		</div>
+		<div class="bottom">
+			<p>El objetivo del curso es descubrir el significado de vocación de servicio, identificar la diferencia entre
+			experiencia de servicio y conocer el concepto de Trío de Servicio, mediante una historieta.</p>
+		</div>
+	</section>
+
+
+
+
+
+		<!--<div class="btn right next_button2" id="right">Siguiente página</div>-->
+
+
+	</div>
+<script type="text/javascript">
+	$('.prev_button2').on('click', function(e){
+		e.preventDefault();
+		if(page >= 1) {
+			page -= 1;
+			goToPage(page);
+
+
+			document.location.hash = "pagina_" + page;
+
+		}
+	});
+	$('.next_button2').on('click', function(e){
+		e.preventDefault();
+
+			page += 1;
+			goToPage(page);
+
+
+			document.location.hash = "pagina_" + page;
+
+	});
+
+</script>

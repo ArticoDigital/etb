@@ -1,0 +1,61 @@
+<div class="inner_content"  style="margin:0px;">
+	<section class="test">
+		<div class="content">
+			<article class="bocadillo-test">
+				<img src="images/heroe3.png" alt="">
+				<h2>Reto de conocimiento</h2>
+				<p>Antes de iniciar nuestro recorrido por la ciudad, es importante realizar nuestro primer reto. <br> <br>
+					Solo debes dar click sobre la repuesta que tu consideres correcta. <br> <br>
+					- Brindar un gran servicio al cliente significa anticiparse y cumplir con las necesidades de sus clientes. <br>
+					<br>
+					<br>
+				<a href="" id="falso">Falso</a> <a href="" id="verdadero" class="btn right next_button2">Verdadero</a>
+				</p>
+			</article>
+			<div class="modal-bg">
+				<div id="modal">
+					<a href="#close" id="close">&#215;</a>
+					<p>vuelve a intentarlo</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--<div class="btn left prev_button2" id="left">página anterior</div>
+	<div class="btn right next_button2" id="right">Siguiente página</div>-->
+
+
+	</div>
+<script type="text/javascript">
+	$('.prev_button2').on('click', function(e){
+		e.preventDefault();
+		if(page >= 1) {
+			page -= 1;
+			goToPage(page);
+			
+
+			document.location.hash = "pagina_" + page;
+			
+		}
+	});
+	$('.next_button2').on('click', function(e){
+		e.preventDefault();
+
+			page += 1;
+			goToPage(page);
+			
+
+			document.location.hash = "pagina_" + page;
+
+	});
+	$('#falso').on('click' , function(e){
+		e.preventDefault();
+		  $('#modal').css('display','block');
+		  $('.modal-bg').fadeIn();
+	});
+	$('#close').click(function(){
+		  $('.modal-bg').fadeOut();		
+		  $('#modal').fadeOut();
+		  return false;
+	});
+	
+</script>

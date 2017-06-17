@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actividad 1</title>
+    <link rel="stylesheet" href="css/comic.css">
+</head>
+<body>
+<section class="actividad">
+    <div class="col-l answers">
+        <h2>Actividad 1</h2>
+        <p>Llego la hora de poner a prueba su conocimiento y para hacerlo arrastre hacia la oración las palabras que
+            hacen falta para completarla. </p>
+        <p>La vocación del servicio es la
+            <span data-accept="inclinacion" class="target espacio" style="text-align:center;height:20px"></span>
+            inherente de ayudar a las
+            <span data-accept="personas" class="target espacio" style="text-align:center;height:20px"></span>
+            , usando su capacidad, esfuerzo e
+            <span data-accept="inteligencia" class="target espacio" style="text-align:center;height:20px"></span>
+            con el propósito de servir con desprendimiento y sensibilidad por el
+            <span data-accept="bien" class="target espacio" style="text-align:center;height:20px"></span>. </p>
+    </div>
+    <div class="col-r quiz-wrapper">
+        <div class="texto">
+            <h2>Arrastra las palabras:</h2>
+            <li data-target="inteligencia">. inteligencia</li>
+            <li data-target="inclinacion">. inclinación</li>
+            <li data-target="bien">. bien</li>
+            <li data-target="personas">. personas</li>
+        </div>
+        <img src="images/heroe-actividad.png" alt="">
+    </div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script>
+    var answersLeft = [];
+    $('.quiz-wrapper').find('li').each(function (i) {
+        var $this = $(this);
+        var answerValue = $this.data('target');
+        var $target = $('.answers .target[data-accept="' + answerValue + '"]');
+        var labelText = $this.html();
+        $this.draggable({
+            revert: "invalid",
+            disabled: false
+        });
+
+        $target.droppable({
+            accept: 'li[data-target="' + answerValue + '"]',
+            drop: function (event, ui) {
+                $this.draggable('destroy');
+                $target.droppable('destroy');
+                $this.html('&nbsp;');
+                $target.html(labelText);
+                answersLeft.splice(answersLeft.indexOf(answerValue), 1);
+
+                if (answersLeft.length < 1) {
+
+                }
+            }
+        });
+        answersLeft.push(answerValue);
+
+    });
+
+</script>
+</body>
+</html>

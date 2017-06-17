@@ -1,0 +1,92 @@
+<!-- COMIC EXPERIENCIA DEL SERVICIO -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#fullpage').fullpage({
+				anchors: ['Comic', 'secondPage', '3rdPage'],
+				sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+				navigation: false,
+				navigationPosition: 'right',
+				navigationTooltips: ['First page', 'Second page', 'Third and last page'],
+				responsiveWidth: 900,
+				afterResponsive: function(isResponsive){
+			}
+		});
+		if($('html').hasClass('fp-enabled')){
+	    $.fn.fullpage.destroy('all');
+		}	
+		//initializing 
+		$('#fullpage').fullpage();
+	});
+</script>
+<div class="inner_content"  style="margin:0px;">
+	<div id="fullpage">
+		<div class="section" id="section1">
+			<div class="slide" id="slide4-0">
+				<section class="comic2-portada">
+					<img src="images/comic/portada_comic_2.jpg" alt="">
+				</section>
+			</div>
+			<div class="slide" id="slide4">
+				<section class="comic4">
+					<div class="row1">
+						<img src="images/comic/comic2_1.png" alt="" class="img1">
+					</div>
+					<div class="row2">
+						<img src="images/comic/comic2_2.png" alt="" class="img1">
+					</div>
+				</section>
+			</div>
+			<div class="slide" id="slide5">
+				<section class="comic5">
+					<div class="row1">
+						<img src="images/comic/comic2_3.png" alt="" class="img1">
+						<img src="images/comic/comic2_4.png" alt="" class="img2">
+					</div>
+					<div class="row2">
+						<img src="images/comic/comic2_5.png" alt="" class="img1">
+					</div>
+				</section>
+			</div>
+			<div class="slide" id="slide6">
+				<section class="comic6">
+					<div class="row1">
+						<img src="images/comic/comic2_6.png" alt="" class="img1">
+						<img src="images/comic/comic2_7.png" alt="" class="img2">
+					</div>
+					<div class="row2">
+						<img src="images/comic/comic2_8.png" alt="" class="img1">
+					</div>
+					<div class="btn-volver"></div>
+				</section>
+			</div>
+		</div>
+	</div><!--end full page slide-->
+</div><!--end inner content-->
+
+
+<script type="text/javascript">
+	$('.prev_button2').on('click', function(e){
+		e.preventDefault();
+		if(page >= 1) {
+			page -= 1;
+			goToPage(page);
+			document.location.hash = "pagina_" + page;	
+		}
+	});
+	$('.next_button2').on('click', function(e){
+		e.preventDefault();
+			page += 1;
+			goToPage(page);
+			document.location.hash = "pagina_" + page;
+
+	});
+	$('.btn-volver').on('click' , function(e){
+        e.preventDefault();
+        console.log(page);
+        page = 3;
+        goToPage(page);
+
+        document.location.hash = "pagina_" + page; 
+    });
+	
+</script>

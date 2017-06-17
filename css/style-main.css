@@ -1,0 +1,289 @@
+@font-face {
+    font-family: lato-regular;
+    src: url(../font/lato/lato-regular.woff);
+}
+@font-face {
+    font-family: lato-bold;
+    src: url(../font/lato/lato-bold.woff);
+}
+@font-face {
+    font-family: lato-black;
+    src: url(../font/lato/lato-black.woff);
+}
+
+/*body{
+	    font-family: lato-regular;
+		margin: 0;
+		background-color: #D2DFE5;
+		width: 100%;
+		overflow-x: hidden;
+	}*/
+	
+	.background-main{
+		background-image: url('../img/background.jpg');
+	    background-repeat: no-repeat;
+	    background-attachment: fixed;
+	    background-position-x: center; 
+	    width: 100vw;
+	    height: 100vh;
+	    z-index: 0;
+	}
+
+	footer{
+		position: fixed;
+		bottom: 0px;
+		width: 100%;
+		z-index: 15;
+	}
+	footer nav{
+		
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+		align-content: center;
+		float: left;
+		align-items: center;
+
+	}
+	
+	.row{
+		display: flex;
+		flex-direction: row;
+	}
+	.column{
+		display: flex;
+		flex-direction: column;	
+	}
+	.center-items{
+
+		align-items: center;
+	}
+	.center{
+		justify-content: center;
+		align-content: center;
+	}
+	.start{
+		justify-content: flex-start;
+	}
+	.between{
+
+		justify-content: space-between;
+		align-content: center;
+	}
+
+
+	footer .btn {
+		background-color: #264467;
+		margin: 0px 3px;
+		height: 53px;
+		cursor: pointer;
+	}
+	footer .btn:hover{
+		background-color: #A6B7CB;
+	}
+
+	footer .btn:hover .arrowsvg{
+		fill: #264467;
+	}
+	.button_off {
+    background-color: #d2d2d2 !important;
+    cursor: unset !important;
+	}
+
+
+	footer .infopage{
+		width: 100px;
+		background-color: #fff;
+		margin: 0px 3px;
+		font-weight: bold;
+		color: #264467;
+	}
+
+	footer .soundicon{
+		position: absolute;
+		bottom: 0px;
+		margin: 7px;
+		cursor: pointer;
+	}
+
+	footer .infopage{
+		height: 53px;
+		display: flex;
+		align-items: center;
+	}
+
+	footer .infopage div{
+
+		width: 100%;
+		font-size: 18px;
+		text-align: center;
+	}
+
+	.menu-desplegable{
+		width:100%;
+		z-index: 5000;
+		display: flex;
+		justify-content: center;
+		position: fixed;
+		/*top: 0px;*/
+		top: -110%;
+		transition: all 0.5s ease 0s;
+		height: 100%;
+
+
+
+	}
+	.menu-desplegable .background{
+		background-color: rgba(0, 0, 0, 0.50);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		cursor: pointer;
+
+	}
+
+	.menu-desplegable #menu{
+		width: 360px;
+		background-color: white;
+		
+		
+		margin-top: 53px;
+		z-index: 20;
+		
+	
+
+	}
+	.menu-desplegable a{
+
+	    text-decoration: none;
+    	color: unset;
+
+	}
+	.menu-desplegable .active{
+		color: #1ABD09;
+	}
+	.content-items{
+		overflow: hidden;
+		overflow-y: auto;
+		min-height: calc(100% - 125px);
+	}
+
+	.gral-info{
+		/*max-height: 30%;*/
+		background-color: #EFF0E2;
+		/*height: 100%;*/
+		height: 125px;
+		justify-content: space-around;
+		align-items: center;
+
+	}
+
+	.gral-info img{
+
+		margin: 0px 3px;
+	}
+	.gral-info .item-gral{
+
+		font-size: 10px;
+		color: #8D95AC;
+		margin-top: 8px;
+	}
+	.gral-info .item-gral a{
+    	text-decoration: none;
+    	color: #8D95AC;
+	}
+	.gral-info .item-gral a:hover{
+    	text-decoration: none;
+    	color: #8D95DD;
+	}
+
+	.mostrar{
+		transition: all 0.5s ease 0s;
+		top:0px;
+	}
+	.rights{
+		font-size: 6px;
+		color: #8D95AC;
+	}
+
+	.barraverde{
+		background-color: #79EF07 !important;
+	}
+
+#scrollStyle::-webkit-scrollbar {
+    width: 0.7em;
+   
+}
+ 
+#scrollStyle::-webkit-scrollbar-track {  
+	border-radius: 0px;
+	background-color: #EFF0E2;
+}
+ 
+#scrollStyle::-webkit-scrollbar-thumb {
+  background-color: #264467;
+  
+  outline: 1px solid slategrey;
+}
+
+progress::-webkit-progress-bar-value {
+  -webkit-appearance: none;
+  background: orangered;
+}
+.icon-item{
+	margin: 0px 15px;
+}
+.content-item-title{
+	font-weight: bold;
+	font-size: 12px;
+	color: #566684;
+
+}
+
+
+.barra-progreso{
+	width: 100%;
+	height: 8px;
+	background-color: #EFF0E2;
+}
+
+.barra-progreso .progreso{
+	height: 8px;
+	width: 15%;
+	background-color: #E5BC25;
+	font-size: 8px;
+    text-align: right;
+}
+
+
+.container-progreso{
+	margin: 8px 0px 15px 0px;
+}
+.wrapperloader {
+	position:absolute;
+	top:50%;
+	left:50%;
+	z-index: 50;
+}
+           
+
+.content1{
+
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10;
+
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+
+}

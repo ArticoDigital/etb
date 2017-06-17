@@ -1,0 +1,102 @@
+<div class="inner_content"  style="margin:0px;">
+	<section class="actividad actividad2">
+		<div class="col-l answer">
+			<h2>Actividad 2</h2>
+			<p>Pasemos a la siguiente prueba de conocimiento que le ayudará a recordar algunos elementos relacionados con la experiencia al Cliente.</p>
+			<li>. Generar una Visión amplia de lo que ofrece 
+la empresa y el mercado.</li>
+			<li>. Lograr mayor satisfacción en sus clientes, 
+generando experiencias inolvidables.</li>
+			<li>. Aportar valor a la organización.</li>
+			<li data-accept="ok">. Tomar en cuenta las recomendaciones.</li>
+
+		</div>
+		<div class="col-r">
+			<div class="texto">
+				<p>Para superar la prueba de clic sobre los hechos que hacen parte de una experiencia al Cliente.</p>
+			</div>
+			<img src="images/heroe-actividad.png" alt="">
+		</div>
+			<div class="modal-bg">
+				<div id="modal">
+					<a href="#close" id="close" class="cerrar-modal-mal">&#215;</a>
+					<p>vuelve a intentarlo</p>
+				</div>
+			</div>
+			<div class="modal-bg-bien">
+				<div id="modal-bien">
+					<p>Muy Bien!.</p>
+					<a href="" class="btn-next-act" id="ir-curso"> Siguiente Actividad.</a>
+				</div>
+			</div>
+	</section>
+	<!--<div class="btn left prev_button2" id="left">página anterior</div>
+	<div class="btn right next_button2" id="right">Siguiente página</div>-->
+
+
+	</div>
+<script type="text/javascript">
+
+	$('.answer li').on('click',function(e){
+        e.preventDefault();
+	    if($(this).data('accept') == 'ok'){
+            $('#modal-bien').css('display','block');
+            $('.modal-bg-bien').fadeIn();
+
+	    }else{
+            $('#modal').css('display','block');
+            $('.modal-bg').fadeIn();
+
+		}
+
+	})
+	$('.prev_button2').on('click', function(e){
+		e.preventDefault();
+		if(page >= 1) {
+			page -= 1;
+			goToPage(page);
+			
+
+			document.location.hash = "pagina_" + page;
+			
+		}
+	});
+	$('.next_button2').on('click', function(e){
+		e.preventDefault();
+
+			page += 1;
+			goToPage(page);
+			
+
+			document.location.hash = "pagina_" + page;
+
+	});
+	$('.mal').on('click' , function(e){
+		e.preventDefault();
+		  $('#modal').css('display','block');
+		  $('.modal-bg').fadeIn();
+	});
+	$('.bien').on('click' , function(e){
+		e.preventDefault();
+		  $('#modal-bien').css('display','block');
+		  $('.modal-bg-bien').fadeIn();
+	});
+	$('.cerrar-modal-mal').click(function(){
+		  $('.modal-bg').fadeOut();		
+		  $('#modal').fadeOut();
+		  return false;
+	});
+	$('.cerrar-modal-bien').click(function(){
+		  $('.modal-bg-bien').fadeOut();		
+		  $('#modal-bien').fadeOut();
+		  return false;
+	});
+	$('#ir-curso').on('click' , function(e){
+        e.preventDefault();
+        console.log(page);
+        page = 9;
+        goToPage(page);
+
+        document.location.hash = "pagina_" + page; 
+    });
+</script>

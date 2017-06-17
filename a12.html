@@ -1,0 +1,75 @@
+<div class="inner_content"  style="margin:0px;">
+	<section class="actividad actividad3">
+		<div class="col-l">
+			<div class="pregunta">
+				<h2>Evaluación Final</h2>
+				<p>4. El Trío del servicio se divide en:</p>
+				<li class="correcta"><span>A.</span>Conozco, soy amable y resuelvo </li>
+				<li class="incorrecta"><span>B.</span>Soy amable, atiendo y soluciono</li>
+				<li class="incorrecta"><span>C.</span>Escucho con interés, conozco y Soy amable</li>
+				<li class="incorrecta"><span>D.</span>Resuelvo, actúo y doy soluciones</li>
+			</div>
+		</div>		
+		<div class="col-r">
+			<div class="texto">
+				<p>Para culminar nuestro 
+				recorrido por la ciudad 
+				lo invito a realizar la 
+				evaluación final. Tenga en cuenta que es una sola 
+				respuesta por cada 
+				pregunta realizada. 
+				Éxitos en esta travesía.
+				</p>
+			</div>
+			<img src="images/heroe-actividad.png" alt="">
+		</div>
+		<div class="modal-bg-incorrecto">
+				<div id="modal-incorrecto">
+					<p>Respuesta Incorrecta</p>
+					<a href="" class="btn-next-act" id="next_button2"> Siguiente Pregunta.</a>
+				</div>
+			</div>
+			<div class="modal-bg-correcto">
+				<div id="modal-correcto">
+					<p>Muy Bien!.</p>
+					<a href="" class="btn-next-act" id="next_button3"> Siguiente Pregunta.</a>
+				</div>
+			</div>
+	</section>
+	<!--<div class="btn left prev_button2" id="left">página anterior</div>
+	<div class="btn right next_button2" id="right">Siguiente página</div>-->
+
+
+	</div>
+<script type="text/javascript">
+	$('.prev_button2').on('click', function(e){
+		e.preventDefault();
+		if(page >= 1) {
+			page -= 1;
+			goToPage(page);
+			document.location.hash = "pagina_" + page;
+		}
+	});
+	$('#next_button2').on('click', function(e){
+		e.preventDefault();
+			page += 1;
+			goToPage(page);
+			document.location.hash = "pagina_" + page;
+	});
+	$('#next_button3').on('click', function(e){
+		e.preventDefault();
+			page += 1;
+			goToPage(page);
+			document.location.hash = "pagina_" + page;
+	});
+	$('.incorrecta').on('click' , function(e){
+		e.preventDefault();
+		  $('#modal-incorrecto').css('display','block');
+		  $('.modal-bg-incorrecto').fadeIn();
+	});
+	$('.correcta').on('click' , function(e){
+		e.preventDefault();
+		  $('#modal-correcto').css('display','block');
+		  $('.modal-bg-correcto').fadeIn();
+	});
+</script>

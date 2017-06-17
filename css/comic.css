@@ -1,0 +1,645 @@
+*{
+		margin: 0;
+		padding: 0
+	}
+@font-face {
+	font-family: 'Conv_fawn';
+	src: url('../font/fawn.eot');
+	src: local('☺'),url('../font/fawn.woff') format('woff'), 
+					url('../font/fawn.ttf') format('truetype'), 
+					url('../font/fawn.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@media screen and (max-width: 1440px){
+	section.actividad p {
+    font-size: 23px !important;
+	}
+	section.actividad2 > .col-l li {
+    font-size: 25px !important;
+	}
+	section.actividad3 > .col-l > .pregunta1 > li{
+		font-size: 25px !important;
+	}
+}
+@media screen and (max-width: 1366px){
+	section.actividad p {
+    font-size: 23px !important;
+	}
+	section.actividad2 > .col-l li {
+    font-size: 25px !important;
+	}
+	section.actividad3 > .col-l > .pregunta1 > li{
+		font-size: 25px !important;
+	}
+}
+@media screen and (max-width:620px){
+	.fp-tableCell{
+        overflow-y: scroll; 
+    }
+    .fp-controlArrow.fp-next{
+    	right: 5px !important; 
+    	border-width: 24.5px 0 24.5px 20px !important;
+    }
+    .fp-controlArrow.fp-prev{
+    	left: 5px !important;
+    	border-width: 24.5px 20px 24.5px 0 !important;
+    }
+    .comic1 > .row1{
+        display: block !important;
+        width: 100% !important;
+        margin: auto !important;
+    } 
+    .comic1 > .row2{
+        display: block !important;
+        width: 75% !important;
+        margin: auto !important;
+    }
+    .comic1, .comic2, .comic3{
+        background-size: cover !important;
+        height: 110% !important;
+    }
+    .comic2 > .row1{
+    	width: 85% !important;
+    	text-align: center !important;
+    }
+    .comic2 > .row1 > img{
+    	width: 97% !important;
+    }
+    .comic2 > .row2{
+    	width: 85% !important;
+    	text-align: center !important;
+    }
+    .comic2 > .row2 > img{
+    	width: 97% !important;
+    }
+    .comic3 > .row1{
+    	display: block !important;
+    	width: 84% !important;
+    	margin: auto !important;
+    }
+    .comic3 > .row2{
+    	display: block !important;
+    	width: 84% !important;
+    	margin: auto !important;
+    }
+    .comic4 > .row1 {
+	    display: block !important;
+	    width: 85% !important;
+	    margin: auto !important;
+	}
+	.comic4 > .row2 {
+	    display: block !important;
+	    width: 85% !important;
+	    margin: auto !important;
+	}
+	.comic5 > .row1 > img {
+	    width: 85% !important;
+	    margin-top: 5% !important;
+	}
+	.comic5 > .row2 > .img1 {
+	    width: 85% !important;
+	    margin-top: 10% !important;
+	}
+	.comic6 >.row1{
+		display: block !important;
+		width: 100% !important;
+	}
+	.comic6 >.row2{
+		display: block !important;
+		width: 100% !important;
+		margin-left: 0 !important;
+	}
+	.comic7 > .row1{
+		width: 85% !important;
+		margin: auto !important;
+	}
+	.comic7 > .row1 > .col-l > img{
+		width: 90% !important;
+	}
+	.comic7 > .row1 > figure.col-l{
+		width: 100% !important;
+		text-align: center !important;
+	}
+	.comic7 > .row1 > figure.col-r{
+		width: 90% !important;
+	}
+	.comic7 > .row1 > .col-r > img{
+		width: 90% !important;
+	}
+	.comic7 > .row1 > .col-r > .img3{
+		float: right;
+    	margin: 20px 0 !important;
+    }
+	.comic7 > .row2 {
+    	width: 85% !important;
+    	text-align: center !important;
+	}
+	.comic7 > .row2 > img {
+    	width: 90% !important;
+	}
+	.comic8 > .row1{
+		width: 90% !important;
+		margin: auto !important;
+	}
+	.comic8 > .row1 > .img1{
+		width: 75% !important;
+	}
+	.comic8 > .row1 > .img2 {
+	    width: 80% !important;
+	    margin-left: -57% !important;
+	}
+	.comic8 > .row2{
+		width: 95% !important;
+		    margin-left: -18% !important;
+	}
+	.comic9 > .row1 {
+	    width: 85% !important;
+	    margin: auto !important;
+	    text-align: center !important;
+	}
+	.comic9 > .row1 > img {
+	    display: block !important;
+	    width: 90% !important;
+	}
+	.comic9 > .row2 {
+	    width: 85% !important;
+	    margin: 0 auto !important;
+	    text-align: center !important;
+	}
+	.comic9 > .row2 > img{
+		width: 90% !important;
+	}
+	.comic10 > .row1 {
+	    width: 85% !important;
+	    margin: auto !important;
+	    text-align: end !important;
+	}
+	.comic10 > .row1 > .img1 {
+	    width: 50% !important;
+	}
+	.comic10 > .row1 >.img2 {
+	    width: 100% !important;
+	    margin-top: -20% !important;
+	}
+	.comic10 > .row2 {
+	    width: 85%;
+	    margin: -20% auto;
+	}
+	.comic10 > .row2 > .img1 {
+	    width: 50% !important;
+	}
+	.comic10 > .row2 > .img2 {
+	    width: 57% !important;
+	    margin-top: -41%;
+	    z-index: 3;
+	    position: relative;
+	}
+
+
+}
+	.hidden{
+		display: none;
+	}
+
+	.comic1 , .comic2 , .comic3{
+		background: url('../images/comic/fondo_1.png') top center no-repeat;
+		width: 100%;
+		max-width: 1920px;
+		text-align: center;
+                height: 100%;
+		padding-top: 15px;
+
+	}
+
+	.comic1 > .row1{
+		display: inline-block;
+	    width: 58%;
+	    position: relative;
+	    z-index: 2;
+	}
+	.comic1 > .row1 > .img1{
+		width: 79%;
+	}
+	.comic1 > .row1 > .img2{
+		width: 76%;
+		position: relative;
+		margin: -3% 0 2% -3%;
+
+	}
+	.comic1 > .row2{
+		display: inline-block;
+	    vertical-align: top;
+	    width: 41%;
+	    padding-top: 35px;
+	    text-align: left;
+	    margin-left: -8%;
+	}
+	.comic1 > .row2 > .img1{
+		width: 90%;
+	}
+	.slide img{
+		width: 100%;
+	}
+	
+	.comic2 > .row1 {
+	    display: block;
+	    width: 82%;
+	    margin: auto;
+	    text-align: left;
+	}
+	.comic2 > .row1 > .img1 {
+	    width: 45%;
+	    vertical-align: top;
+	}
+	.comic2 > .row1 > .img2 {
+	    width: 54%;
+	}
+	.comic2 > .row2 {
+	    display: block;
+	    width: 83%;
+	    margin: auto;
+	    text-align: end;
+	}
+	.comic2 > .row2 > .img1 {
+	    width: 53%;
+	    vertical-align: top;
+	    margin-right: 1%;
+	}
+	.comic2 > .row2 > .img2 {
+	    width: 45%;
+	}
+	.comic3 > .row1 {
+	    display: inline-block;
+	    width: 44%;
+	    vertical-align: top;
+	}
+	.comic3 > .row2 {
+	    display: inline-block;
+    	width: 40.5%;
+    	margin-left: -1.5%;
+	}
+	.comic3 > .row2 >.img2 {
+	    width: 75%;
+	}
+	.comic4 , .comic5 , .comic6{
+		background: url('../images/comic/fondo_2.png') top center no-repeat;
+		background-size: cover;
+		width: 100%;
+                height: 100%;
+		max-width: 1920px;
+		text-align: center;
+		padding-top: 15px;
+	}
+	.comic4 > .row2 {
+	    display: inline-block;
+	    width: 39%;
+	    padding-top: 5%;
+	}
+	.comic4 > .row1 {
+	    display: inline-block;
+	    width: 44%;
+	    vertical-align: top;
+	}
+	.comic5 > .row1 > .img1 {
+	    width: 34.2%;
+	}
+	.comic5 > .row1 > .img2 {
+	    width: 46.4%;
+	    vertical-align: top;
+	}
+	.comic5 > .row2 > .img1{
+		width: 57.5%;
+	}
+	.comic6 > .row1 {
+	    display: inline-block;
+	    width: 60%;
+	    text-align: left;
+	    vertical-align: top;
+	}
+	.comic6 > .row1 >.img2 {
+	    width: 60%;
+	}
+	.comic6 >.row2 {
+	    display: inline-block;
+	    width: 47%;
+	    margin-left: -10%;
+	    margin-top: 17.5%;
+	}
+	.comic7, .comic8 , .comic9 , .comic10 , .comic11{
+		background: url('../images/comic/fondo_3.png') top center no-repeat;
+		background-size: cover;
+		width: 100%;
+                height: 100%;
+		max-width: 1920px;
+		text-align: center;
+		padding-top: 15px;
+	}
+	.comic7 > .row1 {
+	    width: 90%;
+	    margin: auto;
+	}
+	.comic7 > .row1 > figure.col-l {
+	    display: inline-block;
+	    width: 55%;
+	    vertical-align: top;
+	    text-align: end;
+	}
+	.comic7 > .row1 > figure.col-r {
+	    display: inline-block;
+	    width: 44%;
+	    text-align: left;
+	}
+	.comic7 > .row1 > .col-r > .img2{
+		width: 90%;
+	}
+	.comic7 > .row1 > .col-r > .img3{
+		width: 76%;
+    	margin-top: -1%;
+    	position: relative;
+   		z-index: 1;
+	}
+	.comic7 > .row2 {
+	    width: 90%;
+	    margin: -4.9% auto;
+	    text-align: justify;
+	}
+	.comic7 > .row2 > .img1{
+		width: 30%;
+		vertical-align: top;
+	}
+	.comic7 > .row2 > .img2{
+		width: 34%;
+	    position: relative;
+	    z-index: 2;
+	    margin-left: -1%;
+	}
+	.comic7 > .row2 > .img3{
+		width: 36%;
+    	margin-left: -5%;
+	}
+	.comic8 > .row1 {
+	    width: 80%;
+	    display: inline-block;
+	    vertical-align: top;
+	}
+	.comic8 > .row2 {
+	    width: 45.4%;
+	    display: inline-block;
+	    margin-left: -36%;
+	    position: relative;
+	    z-index: 3;
+	    text-align: end;
+	}
+	.comic8 > .row1 > .img1 {
+	    width: 54%;
+	    position: relative;
+	    z-index: 2;
+	    vertical-align: top;
+	}
+	.comic8 > .row1 >.img2 {
+	    width: 75%;
+	    position: relative;
+	    z-index: 1;
+	    margin-left: -34%;
+	    margin-top: 4%;
+	}
+	.comic8 > .row2 >.img1 {
+		width: 49%;
+	}
+	.comic8 > .row2 > .img2{
+		margin-left: 7%;
+	    margin-top: 5%;
+	    position: relative;
+	    z-index: 3;
+	    width: 80%;
+	    display: block;
+	}
+	.comic9 > .row1 {
+	    width: 78%;
+	    margin: auto;
+	    text-align: justify;
+	}
+	.comic9 > .row1 >.img1 {
+	    display: inline-block;
+	    width: 60%;
+	}
+	.comic9 > .row1 > .img2 {
+	    width: 38%;
+	    vertical-align: top;
+	    position: relative;
+	}
+	.comic9 > .row2 {
+	    width: 78%;
+	    margin: -15.5% auto;
+	    text-align: justify;
+	}
+	.comic9 > .row2 > .img1 {
+	    width: 38%;
+	    position: relative;
+	    z-index: 2;
+	    margin-left: 3%;
+	}
+	.comic9 > .row2 >.img2 {
+	    width: 60%;
+	    margin-left: -3%;
+	}
+	.comic10 > .row1 {
+	    width: 90%;
+	    margin: auto;
+	    text-align: justify;
+	}
+	.comic10 > .row1 > .img1 {
+	    width: 22%;
+	    vertical-align: top;
+	    margin-right: -3%;
+	    position: relative;
+	    margin-top: 4%;
+	}
+	.comic10 > .row1 >.img2 {
+	    width: 70%;
+	}
+	.comic10 > .row2 {
+	    width: 90%;
+	    margin: -32% auto;
+	    text-align: right;
+	}
+	.comic10 > .row2 > .img1 {
+	    width: 24%;
+	    float: left;
+	    margin-top: 15%;
+	    position: relative;
+	    margin-left: 1%;
+	}
+	.comic10 > .row2 > .img2 {
+	    width: 25%;
+	}
+	.comic11 > .row1 {
+	    width: 76%;
+	    margin: auto;
+	}
+	.comic11 > .row1 > .img1{
+		width: 95%;
+	}
+	section.actividad{
+		background: url('../images/fondo-actividad.jpg') center no-repeat;+
+		width: 100%;
+		font-family: 'Conv_fawn';
+	}
+	section.actividad > .col-l{
+		background: url('../images/cuadro-1.png') center top no-repeat;
+		display: inline-block;
+		width: 65%;
+		vertical-align: top;
+		height: 879px;
+	    background-size: 90%;
+	    margin-top: 3%;
+	    margin-bottom: 18px;
+	}
+	section.actividad h2{
+		text-align: center;
+	    color: orange;
+	    font-size: 46px;
+	    color: #e46710;
+	    text-transform: uppercase;
+
+	}
+	section.actividad > .col-l > h2{
+		width: 70%;
+	    margin: auto;
+	    padding: 10% 0px 0px;
+	}
+	section.actividad p{
+		font-size: 37px;
+	    color: #3c3c3c;
+	    text-align: justify;
+	    text-transform: uppercase;
+	}
+	section.actividad > .col-l > p{
+		width: 70%;
+	    margin: 7% auto;
+	}
+	section.actividad > .col-l > p > span.espacio {
+	    display: inline-block;
+	    border-bottom: 1px solid #9a1f0c;
+	    width: 233px;
+	    margin: 0 10px;
+	}
+	section.actividad > .col-r{
+		background: url('../images/cuadro-2.png') center top no-repeat;
+    	background-size: 90%;
+		height: 782px;
+		width: 30%;
+		text-align: right;
+		display: inline-block;
+		    margin: 2% 0 0;
+	}
+	section.actividad > .col-r > .texto{
+		text-align: left;
+	    width: 80%;
+	    margin: 20% auto;
+	}
+	section.actividad > .col-r > img{
+		margin: -19.3% -15.5%;
+	}
+	section.actividad > .col-r > .texto > h2{
+		font-size: 37px;
+		margin: 10% auto;
+	}
+	section.actividad > .col-r > .texto > li{
+		list-style: none;
+		cursor: pointer;
+		padding-left: 10%;
+	    font-size: 37px;
+	    text-transform: uppercase;
+	    color: #3c3c3c;
+	}
+	section.actividad2 > .col-l > p{
+		margin: 4% auto;
+	}
+	section.actividad2 > .col-l  li{
+		list-style: none;
+		color: #3c3c3c;
+		cursor: pointer;
+		font-size: 36px;
+		width: 70%;
+		margin: 30px auto 0;
+		text-align: center;
+		text-transform: uppercase;
+	    text-decoration: underline;
+	    text-decoration-color: #9a1f0c;
+	}
+	section.actividad2 > .col-r > .texto > p{
+		width: 70%;
+    	margin: auto;
+	}
+	section.actividad3 > .col-l > .pregunta > p{
+		text-align: center;
+		margin: 5% auto;
+		width: 70%;
+	}
+	section.actividad > .col-l > .pregunta > h2{
+		width: 70%;
+	    margin: auto;
+	    padding: 10% 0px 0px;
+	}
+	section.actividad3 > .col-l > .pregunta > li{
+		width: 70%;
+	    margin: 20px auto;
+	    list-style: none;
+	    font-size: 36px;
+	    color: #3c3c3c;
+	    text-transform: uppercase;
+	    cursor: pointer;
+	}
+	section.actividad3 > .col-l > .pregunta > li > span{
+		background: #e46710;
+	    border-radius: 50%;
+	    width: 30px;
+	    height: 40px;
+	    display: inline-block;
+	    color: #fff;
+	    padding-left: 10px;
+	    margin-right: 10px; 
+	}
+	section.actividad3 > .col-l > .pregunta > li.correcta {
+		background: #e46710;
+   		border: 1px solid #fff;
+	}
+	section.actividad3 > .col-r > .texto{
+		text-align: left;
+	    width: 60%;
+	    margin: 16.6% auto;
+	}
+	section.actividad3 > .col-r > .texto > p{
+		font-size: 32px;
+	}
+	.btn-volver{
+		position: absolute;
+		cursor: pointer;
+		right: 1%;
+	    bottom: 5%;
+	    color: #fff;
+	    background: url('../images/comic/volver.png') center no-repeat;
+	    width: 206px;
+    	height: 80px;
+	}
+	.btn-volver:hover{
+	    background: url('../images/comic/volver_rol.png') center no-repeat;
+	}
+	section.actividad > .col-l a{
+	    width: 20%;
+	    display: inline-block;
+	    text-align: center;
+	    font-size: 25px;
+	    text-decoration: none;
+	    color: #e46710;
+	}
+	a.mal{
+		float: left;
+    	margin-left: 20%;
+	}
+	a.bien{
+		float: right;
+    	margin-right: 20%;
+	}

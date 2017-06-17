@@ -1,0 +1,121 @@
+<div class="inner_content" style="margin:0px;">
+    <section class="actividad">
+        <div class="col-l answers">
+            <h2 class="bien">Actividad 1</h2>
+            <p>Llego la hora de poner a prueba su conocimiento y para hacerlo arrastre hacia la oración las palabras que
+                hacen falta para completarla. </p>
+            <p>La vocación del servicio es la
+                <span data-accept="inclinacion" class="target espacio" style="text-align:center;height:20px"></span>
+                inherente de ayudar a las
+                <span data-accept="personas" class="target espacio" style="text-align:center;height:20px"></span>
+                , usando su capacidad, esfuerzo e
+                <span data-accept="inteligencia" class="target espacio" style="text-align:center;height:20px"></span>
+                con el propósito de servir con desprendimiento y sensibilidad por el
+                <span data-accept="bien" class="target espacio" style="text-align:center;height:20px"></span>. </p>
+        </div>
+        <div class="col-r quiz-wrapper">
+            <div class="texto">
+                <h2>Arrastra las palabras:</h2>
+                <li data-target="inteligencia">. inteligencia</li>
+                <li data-target="inclinacion">. inclinación</li>
+                <li data-target="bien">. bien</li>
+                <li data-target="personas">. personas</li>
+            </div>
+            <img src="images/heroe-actividad.png" alt="">
+        </div>
+        <div class="modal-bg-bien">
+            <div id="modal-bien">
+                <p>Muy Bien!.</p>
+                <a href="" class="btn-next-act"> Siguiente Actividad.</a>
+            </div>
+        </div>
+    </section>
+    <!--<div class="btn left prev_button2" id="left">página anterior</div>
+    <div class="btn right next_button2" id="right">Siguiente página</div>-->
+
+
+</div>
+
+<script>
+    var answersLeft = [];
+    $('.quiz-wrapper').find('li').each(function (i) {
+        var $this = $(this);
+        var answerValue = $this.data('target');
+        var $target = $('.answers .target[data-accept="' + answerValue + '"]');
+        var labelText = $this.html();
+        $this.draggable({
+            revert: "invalid",
+            disabled: false
+        });
+
+        $target.droppable({
+            accept: 'li[data-target="' + answerValue + '"]',
+            drop: function (event, ui) {
+                $this.draggable('destroy');
+                $target.droppable('destroy');
+                $this.html('&nbsp;');
+                $target.html(labelText.substring(1,labelText.length) );
+                answersLeft.splice(answersLeft.indexOf(answerValue), 1);
+
+                if (answersLeft.length < 1) {
+                    $('#modal-bien').css('display', 'block');
+                    $('.modal-bg-bien').fadeIn();
+                }
+            }
+        });
+        answersLeft.push(answerValue);
+
+    });
+
+</script>
+<script type="text/javascript">
+    $('.prev_button2').on('click', function (e) {
+        e.preventDefault();
+        if (page >= 1) {
+            page -= 1;
+            goToPage(page);
+
+
+            document.location.hash = "pagina_" + page;
+
+        }
+    });
+    $('.next_button2').on('click', function (e) {
+        e.preventDefault();
+
+        page += 1;
+        goToPage(page);
+
+
+        document.location.hash = "pagina_" + page;
+
+    });
+    $('.mal').on('click', function (e) {
+        e.preventDefault();
+        $('#modal').css('display', 'block');
+        $('.modal-bg').fadeIn();
+    });
+    $('.bien').on('click', function (e) {
+        e.preventDefault();
+        $('#modal-bien').css('display', 'block');
+        $('.modal-bg-bien').fadeIn();
+    });
+    $('.cerrar-modal-mal').click(function () {
+        $('.modal-bg').fadeOut();
+        $('#modal').fadeOut();
+        return false;
+    });
+    $('.cerrar-modal-bien').click(function () {
+        $('.modal-bg-bien').fadeOut();
+        $('#modal-bien').fadeOut();
+        return false;
+    });
+    $('.btn-next-act').on('click', function (e) {
+        e.preventDefault();
+        console.log(page);
+        page = 8;
+        goToPage(page);
+
+        document.location.hash = "pagina_" + page;
+    });
+</script>

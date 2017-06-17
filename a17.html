@@ -1,0 +1,43 @@
+<div class="inner_content"  style="margin:0px;">
+	<section class="actividad actividad3">
+		<div class="col-l">
+			<div class="pregunta">
+				<h2>Evaluación Final</h2>
+				<p>-Hemos llegado al final de nuestra primera visita a la ciudad. Descargue su certificado a través del siguiente link.</p>
+			</div>
+		</div>		
+		<div class="col-r">
+			<div class="texto">
+				<p>Para culminar nuestro 
+				recorrido por la ciudad 
+				lo invito a realizar la 
+				evaluación final. Tenga en cuenta que es una sola 
+				respuesta por cada 
+				pregunta realizada. 
+				Éxitos en esta travesía.
+				</p>
+			</div>
+			<img src="images/heroe-actividad.png" alt="">
+		</div>
+	</section>
+	<!--<div class="btn left prev_button2" id="left">página anterior</div>
+	<div class="btn right next_button2" id="right">Siguiente página</div>-->
+
+
+	</div>
+<script type="text/javascript">
+	$('.prev_button2').on('click', function(e){
+		e.preventDefault();
+		if(page >= 1) {
+			page -= 1;
+			goToPage(page);
+			document.location.hash = "pagina_" + page;
+		}
+	});
+	$('#next_button2').on('click', function(e){
+		e.preventDefault();
+			page += 1;
+			goToPage(page);
+			document.location.hash = "pagina_" + page;
+	});
+</script>
