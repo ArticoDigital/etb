@@ -32,11 +32,11 @@ var suspend_data_eval;
 var suspend_data_porcentaje;
 
 //PARAMETROS
-var total_pages = 20; /*-- Modificar éste valor de acuerdo al número total de páginas menos 1--*/
+var total_pages = 17; /*-- Modificar éste valor de acuerdo al número total de páginas menos 1--*/
 var activity_flag=false; //variable que lleva true si esta en una actividad que no ha realizado el usuario
-var array_menu=[0,1,2]; //menu central, paginas que debe ir
-var pos_evaluaciones=[]; //Posicion de las evaluaciones
-var cal_evaluaciones=[]; //Calificacion de las evaluaciones
+var array_menu=[4,5,6,7]; //menu central, paginas que debe ir
+var pos_evaluaciones=[4,5,6]; //Posicion de las evaluaciones
+var cal_evaluaciones=[0,0,0]; //Calificacion de las evaluaciones
 var puntajepasa=59;  //porcentaje minimo para pasar una actividad individual dentro del recurso.
 var button_pressed=false;
 
@@ -334,7 +334,7 @@ function goToPage(currentPage) {
             
 			flag1=true;
             preloadhide();
-			//alert(suspend_data_visited);
+			alert(suspend_data_visited);
             var posicioneval = evaluacion_arraypos_eval(currentPage);
 			
             //alert(posicioneval);
@@ -348,7 +348,7 @@ function goToPage(currentPage) {
                     //alert("Debes realizar esta actividad para continuar");
                     activity_flag=true;
                     $('.next_button').addClass('button_off');
-				}else if(suspend_data_eval_number > 0 && suspend_data_eval_number<70){
+				}/*else if(suspend_data_eval_number > 0 && suspend_data_eval_number<70){
                     
                     alerta="Previamente realizaste esta actividad, tu calificación actual es "+suspend_data_eval_number+ "%. Puedes mejorar la calificación si lo deseas.";
                     swal({
@@ -356,11 +356,12 @@ function goToPage(currentPage) {
                         text: alerta,
                         type: "info",
                         confirmButtonText: "Aceptar"
-                        });
-                        
+                        });                    
+                      console.log(alerta);
                     
                     
 				}else{
+
                   alerta="Previamente realizaste esta actividad, tu calificación actual es "+suspend_data_eval_number+ "%.";
                     swal({
                         title: "Aviso",
@@ -368,7 +369,7 @@ function goToPage(currentPage) {
                         type: "info",
                         confirmButtonText: "Aceptar"
                         });                  
-				}
+				}*/
 					
             }else{
                 activity_flag=false;
@@ -376,6 +377,17 @@ function goToPage(currentPage) {
 				
             }
             
+            if(page==total_pages){
+                    alerta="Hemos llegado al final, descarga el certificado en esta página.";
+                    swal({
+                        title: "Aviso",
+                        text: alerta,
+                        type: "info",
+                        confirmButtonText: "Aceptar"
+                        });    
+
+            }
+
             button_pressed=false;
             
             procesarPorcentajeSuspendData();
@@ -637,7 +649,6 @@ function fn_first_suspend_data(){
             suspend_data_pos_eval=pos_evaluaciones; //Posicion de las evaluaciones
             suspend_data_eval=cal_evaluaciones; //Calificacion de las evaluaciones
             suspend_data_porcentaje=0;  //Porcentaje navegado del curso
-
     }
     arrays_to_suspend_data();
 }
@@ -676,8 +687,14 @@ function setmenu_states(){
     var ini=0;
     var fin=0;
     var porcentaje=0;
-    for(var i=0; i<array_menu.length; i++){
-        ini=array_menu[i];
+    var comicsvistos=0;
+    for(var i=0; i<array_menu.length-1; i++){
+        //if(parseInt(suspend_data_visited[i],10)==1){
+
+        comicsvistos+=parseInt(suspend_data_visited[array_menu[i]],10);
+
+        //}
+        /*ini=array_menu[i];
         if((i+1)>=array_menu.length){
             fin=total_pages;
         }else{
@@ -695,8 +712,15 @@ function setmenu_states(){
  		if(porcentajeint==100){
  			$('#progreso_'+i).addClass("barraverde");
 
- 		}        
+ 		} 
+        */       
     }    
+    //alert(comicsvistos);
+    if(comicsvistos==3){
+
+        $('.item-6').css('z-index',"10000");
+        $('.item-7').css('width',"5%");
+    }
 }
 
 function set_actual_menu(currentPage){
