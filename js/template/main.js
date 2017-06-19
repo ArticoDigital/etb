@@ -517,11 +517,16 @@ function getusername(){
     
     if(lastname_name==null){
         lastname_name="Apellido,Nombre";
-        user_name="No registra";
+        //user_name="No registra";
         
     }
+
     var namearray=lastname_name.split(",");
+    if(namearray.length>1){
     user_name = namearray[1]+" "+namearray[0];
+    }else{
+       user_name= lastname_name;
+    }
     console.log(user_name);
     
 }
