@@ -1,7 +1,19 @@
 <div class="inner_content"  style="margin:0px;">
+	<audio id="soundbackground" src="audios/ciudad_principal.mp3" autoplay="true" loop></audio>
+	<div class="soundicon" id="soundicon">
+		<img src="img/soundicon.svg" id="btn_sound" alt="" class="icon-left">
+		<img src="img/nosoundicon.svg" id="btn_nosound" alt="" style="display:none;" class="icon-left"></div>	
+	</div>	
 	<div id="Parallax-content">
 		<div class="item-sem">
+			<img src="images/ruso.gif" class="ruso">
+			<img src="images/corazon_1.gif" class="corazon_1">
+			<img src="images/carro.gif" class="carro">
 			<img src="images/semaforo.gif" class="semaforo">
+			<img src="images/corazon_2.gif" class="corazon_2">
+			<img src="images/ring.gif" class="ring">
+			<img src="images/puerta.gif" class="puerta">
+			<img src="images/carro_2.gif" class="carro_2">
 		</div>
 		<div class="items">
 			<img src="images/heroe-ciudad-1.png" alt="" class="item-1"> 
@@ -12,13 +24,6 @@
 			<img src="images/icon-actividades.png" alt="" class="item-6">
 			<img src="images/obrero-etb.png" alt="" class="item-7">
 		</div>
-		<!--<div class="item-1"></div>
-		<div class="item-2"></div>
-		<div class="item-3"></div>
-		<div class="item-4"></div>
-		<div class="item-5"></div>
-		<div class="item-6"></div>
-		<div class="item-7"></div>-->
 	</div>
 
 
@@ -73,5 +78,16 @@
         goToPage(page);
         document.location.hash = "pagina_" + page; 
     });
-	
+	 $('#soundicon').on('click', function(e) {
+        var bksound = document.getElementById("soundbackground");
+        if(bksound.muted){
+            bksound.muted = false;
+        }
+        else{
+            bksound.muted= true;
+        }
+        $('#btn_sound').toggle();
+        $('#btn_nosound').toggle();
+        
+    });
 </script>

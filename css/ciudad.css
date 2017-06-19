@@ -68,6 +68,41 @@ body{
    top: 523px;
    width: 50px;
 }
+.ruso{
+   position: absolute;
+   left: 12.05%;
+   top: 601px;
+}
+.corazon_1{
+   position: absolute;
+   left: 15.22%;
+   top: 600px;
+}
+.corazon_2{
+   position: absolute;
+   left: 30.8%;
+   top: 592px;
+}
+.carro{
+   position: absolute;
+   left: 18%;
+   top: 665px;
+}
+.ring{
+   position: absolute;
+   left: 40.97%;
+   top: 529px;
+}
+.carro_2{
+   position: absolute;
+   right: 9.4%;
+   bottom: 104px;
+}
+.puerta{
+   position: absolute;
+   left: 56.54%;
+   top: 517px;
+}
 @media screen and (max-width: 1440px){
    .item-1{
       width: 16%;
@@ -75,11 +110,40 @@ body{
    .item-2, .item-3, .item-5, .item-6{
       width: 7%;
    }
+   .item-3{
+      top: 30px;
+   }
+   .item-6{
+      top: 250px;
+   }
    .item-4{
       width: 15%;
    }
    .item-7{
       width: 10%;
    }
-
+   .ruso{
+      top:459px !important;
+   }
+   .corazon_1 {
+      top: 458px !important;
+   }
+   .carro {
+      top: 523px !important;
+   }
+   .semaforo {
+      top: 382px !important;
+   }  
+   .corazon_2 {
+      top: 450px !important;
+   }
+   .ring {
+      top: 387px !important;
+   }
+   .puerta {
+      top: 375px !important;
+   }
+   .carro_2 {
+      bottom: -38px !important;
+   }
 }

@@ -24,6 +24,18 @@ body{
     left: 50%;
     z-index: 0;
 }
+.soundicon{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    margin: 7px;
+    cursor: pointer;
+    z-index: 999;
+        background-color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+  }
 footer{
         position: fixed;
         bottom: 0px;

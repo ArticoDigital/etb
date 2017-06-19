@@ -15,6 +15,11 @@
 </script>
 <div class="inner_content"  style="margin:0px;">
 	<div id="fullpage">
+		<audio id="soundbackground" src="audios/oficina.mp3" autoplay="true" loop></audio>
+		<div class="soundicon" id="soundicon">
+			<img src="img/soundicon.svg" id="btn_sound" alt="" class="icon-left">
+			<img src="img/nosoundicon.svg" id="btn_nosound" alt="" style="display:none;" class="icon-left">
+		</div>	
 		<div class="section" id="section1">
 			<div class="slide" id="slide0">
 				<section class="comic1-portada">
@@ -96,5 +101,16 @@
 
         document.location.hash = "pagina_" + page; 
     });
-	
+	$('#soundicon').on('click', function(e) {
+        var bksound = document.getElementById("soundbackground");
+        if(bksound.muted){
+            bksound.muted = false;
+        }
+        else{
+            bksound.muted= true;
+        }
+        $('#btn_sound').toggle();
+        $('#btn_nosound').toggle();
+        
+    });
 </script>
