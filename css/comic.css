@@ -15,10 +15,10 @@
 	section.actividad p {
     font-size: 23px !important;
 	}
-	section.actividad2 > .col-l li {
+	section.actividad > .col-l li {
     font-size: 25px !important;
 	}
-	section.actividad3 > .col-l > .pregunta1 > li{
+	section.actividad > .col-l > .pregunta1 > li{
 		font-size: 25px !important;
 	}
 }
@@ -26,10 +26,10 @@
 	section.actividad p {
     font-size: 23px !important;
 	}
-	section.actividad2 > .col-l li {
+	section.actividad > .col-l li {
     font-size: 25px !important;
 	}
-	section.actividad3 > .col-l > .pregunta1 > li{
+	section.actividad > .col-l > .pregunta > li{
 		font-size: 25px !important;
 	}
 }
@@ -602,7 +602,7 @@
 	    padding-left: 10px;
 	    margin-right: 10px; 
 	}
-	section.actividad3 > .col-l > .pregunta > li.correcta {
+	section.actividad3 > .col-l > .pregunta > li:hover {
 		background: #e46710;
    		border: 1px solid #fff;
 	}
