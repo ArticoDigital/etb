@@ -1,4 +1,4 @@
-var debug=true;
+var debug=false;
 
 //var canvas, stage, exportRoot;
 var canvas=undefined;
@@ -20,11 +20,14 @@ var show_finish_msg = false;
 var processedUnload = false;
 var reachedEnd = false;
 
+var user_name;
+
 var vistapagina=false;
 //bookmark  lleva la pagina actual
 //var suspend_data = "paginas::1,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0::pos_evaluaciones::3,4,8,12,4::evaluaciones::0,0,0,0,0::porcentaje::20";
 var completionStatus="Incomplete";
 var suspend_data = "";
+//var suspend_data="paginas::1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0::pag_evaluaciones::4,5,6::calificacion_evaluaciones::10,10,10::porcentaje_visto::0";
 var separador = "::";
 var suspend_data_visited = new Array();
 var suspend_data_pos_eval;
@@ -334,7 +337,7 @@ function goToPage(currentPage) {
             
 			flag1=true;
             preloadhide();
-			alert(suspend_data_visited);
+			//alert(suspend_data_visited);
             var posicioneval = evaluacion_arraypos_eval(currentPage);
 			
             //alert(posicioneval);
@@ -348,28 +351,7 @@ function goToPage(currentPage) {
                     //alert("Debes realizar esta actividad para continuar");
                     activity_flag=true;
                     $('.next_button').addClass('button_off');
-				}/*else if(suspend_data_eval_number > 0 && suspend_data_eval_number<70){
-                    
-                    alerta="Previamente realizaste esta actividad, tu calificación actual es "+suspend_data_eval_number+ "%. Puedes mejorar la calificación si lo deseas.";
-                    swal({
-                        title: "Aviso",
-                        text: alerta,
-                        type: "info",
-                        confirmButtonText: "Aceptar"
-                        });                    
-                      console.log(alerta);
-                    
-                    
-				}else{
-
-                  alerta="Previamente realizaste esta actividad, tu calificación actual es "+suspend_data_eval_number+ "%.";
-                    swal({
-                        title: "Aviso",
-                        text: alerta,
-                        type: "info",
-                        confirmButtonText: "Aceptar"
-                        });                  
-				}*/
+				}
 					
             }else{
                 activity_flag=false;
@@ -384,7 +366,9 @@ function goToPage(currentPage) {
                         text: alerta,
                         type: "info",
                         confirmButtonText: "Aceptar"
-                        });    
+                        }); 
+                    completionStatus="Completed";
+                    ScormProcessSetValue("cmi.completion_status", "completed");   
 
             }
 
@@ -404,29 +388,11 @@ function goToPage(currentPage) {
             set_actual_menu(currentPage);
             
             //cmi.progress_measure  o cmi.progress_measure
-            
-            var fin=total_pages+1;
-
-            var intervalosuma=suma(0, fin,suspend_data_visited);
-            
-            if (intervalosuma == fin && reachedEnd==false){
-                
-                reachedEnd = true;
-                swal({
-                        title: "¡Felicitaciones!",
-                        text: "Has finalizado el contenido del módulo.",
-                        type: "success",
-                        confirmButtonText: "Aceptar"
-                        });
-                
-                
-                //setScore(100);
-                completionStatus="Completed";
-                ScormProcessSetValue("cmi.completion_status", "completed");
-            }
+          
 
 //            init();
         }
+
         button_pressed=false;
         if (statusText == "error") {
             alert("Error: " + xhr.status + " - " + xhr.statusText);
@@ -462,10 +428,11 @@ function doStart() {
         page = 0;
         fn_first_suspend_data();
         suspend_data_to_arrays();
-        showusername();
+        //showusername();
+        getusername();
 
     goToPage(page);
-
+    
     }else{
     //cl.hide();
 
@@ -492,7 +459,7 @@ function doStart() {
     //because cmi.location may not be initialized
     var bookmark = ScormProcessGetValue("cmi.location", false);
     var first_suspend_data = ScormProcessGetValue("cmi.suspend_data", false);
-    showusername();
+    getusername();
     //if there isn't a stored bookmark, start the user at the first page
     if (bookmark == "") {
         page = 0;
@@ -542,6 +509,24 @@ function showusername(){
     
 }
 
+function getusername(){
+    //var name_obj = document.getElementById("name_user");
+    //var name_user = ScormProcessGetValue("cmi.learner_name", true);
+    var lastname_name = ScormProcessGetValue("cmi.learner_name", true);
+    
+    
+    if(lastname_name==null){
+        lastname_name="Apellido,Nombre";
+        user_name="No registra";
+        
+    }
+    var namearray=lastname_name.split(",");
+    user_name = namearray[1]+" "+namearray[0];
+    console.log(user_name);
+    
+}
+
+
 function continuarStart(fstSD){
   if (fstSD == "") {
         fn_first_suspend_data();
@@ -574,7 +559,7 @@ function procesarCalificacion(numeroevaluacion, puntajeposible,puntajeobtenido){
 		//Se debe actualizar el porcentaje de la calificacio total de acuerdo a la ponderacion
 		var porcentaje=(puntajeobtenido/puntajeposible)*100;
 		var activity_porcentaje=parseInt(porcentaje,10);
-		alertacalificion="Para esta actividad has obtenido un puntaje de: "+activity_porcentaje+"%.";
+		/*alertacalificion="Para esta actividad has obtenido un puntaje de: "+activity_porcentaje+"%.";
 		
 		if(activity_porcentaje>=puntajepasa){
 			swal({
@@ -592,7 +577,7 @@ function procesarCalificacion(numeroevaluacion, puntajeposible,puntajeobtenido){
 								}); 
 				
 		}
-						
+		*/				
 		var porcentajeprevio=parseInt(suspend_data_eval[numeroevaluacion-1],10);
 		if(activity_porcentaje>porcentajeprevio){
 			suspend_data_eval[numeroevaluacion-1]=activity_porcentaje;
@@ -688,6 +673,10 @@ function setmenu_states(){
     var fin=0;
     var porcentaje=0;
     var comicsvistos=0;
+    //$('.item-6').css('z-index',"10000");
+    $('.item-6').css('display',"none");
+    
+    
     for(var i=0; i<array_menu.length-1; i++){
         //if(parseInt(suspend_data_visited[i],10)==1){
 
@@ -715,11 +704,26 @@ function setmenu_states(){
  		} 
         */       
     }    
-    //alert(comicsvistos);
+    //alert( parseInt(suspend_data_visited[array_menu[array_menu.length-1]]));
+    //alert(suspend_data_visited[array_menu[array_menu.length-1]]);
+    console.log(suspend_data_visited);
+    console.log(comicsvistos);
     if(comicsvistos==3){
+        if(parseInt(suspend_data_visited[array_menu[array_menu.length-1]])==0){
+            alertacalificion="Has terminado de ver los contenidos, busca las actividades de aprendizaje en la ciudad.";
+        
+            
+            swal({
+                                title: "¡Bien!",
+                                text: alertacalificion,
+                                type: "success",
+                                confirmButtonText: "Aceptar"
+                                });
+        }
 
         $('.item-6').css('z-index',"10000");
         $('.item-7').css('width',"5%");
+        $('.item-6').css('display',"block");
     }
 }
 
