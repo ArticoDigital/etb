@@ -104,8 +104,47 @@ body{
    top: 517px;
 }
 @media screen and (max-width: 400px){
-   .item-1{
-      width: 12%;
+   .item-1, .item-4{
+      width: 12% !important;
+   }
+   .item-2{
+      width: 5% !important;
+      left: 620px !important;
+   }
+   .item-3{
+      width: 5% !important;
+      top: 40px !important;
+      left: 1020px !important;
+   }
+   .item-5{
+      top: 340px !important;
+   }
+   .item-7 {
+      width: 8% !important;
+   }
+   .ruso {
+      top: 425px !important;
+   }
+   .corazon_1 {
+      top: 424px !important;
+   }
+   .carro {
+      top: 489px !important;
+   }
+   .semaforo {
+      top: 349px !important;
+   }
+   .corazon_2 {
+      top: 416px !important;
+   }
+   .ring {
+      top: 353px !important;
+   }
+   .puerta {
+      top: 341px !important;
+   }
+   .carro_2 {
+      bottom: -72px !important;
    }
 }
 @media screen and (max-width: 1440px){
