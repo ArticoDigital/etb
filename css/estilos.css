@@ -578,4 +578,29 @@ section.test{
     font-size: 45px;
     text-align: center;
 }
+@media screen and (max-width: 400px){
+    #modal, #modal-bien, #modal-incorrecto, #modal-correcto {
+        background-size: 45% !important;
+        left: 5% !important;
+    }
+    #close{
+      margin-right: 28% !important;
+      margin-top: 40px !important;
+    }
+    #modal > p, #modal-bien > p, #modal-incorrecto > p , #modal-correcto > p{
+      width: 20% !important;
+      margin: 11% auto !important;
+      font-size: 25px !important; 
+    }
+    #modal-incorrecto > p {
+      width: 30% !important;
+      margin: 12% auto !important;
+      font-size: 20px !important;
+    }
+    .btn-next-act{
+      margin: -10% auto !important;
+      width: 37% !important;
+      font-size: 20px !important;
+    }
+}
 /******* END MODAL ******/
