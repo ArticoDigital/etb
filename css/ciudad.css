@@ -103,6 +103,11 @@ body{
    left: 56.54%;
    top: 517px;
 }
+@media screen and (max-width: 400px){
+   .item-1{
+      width: 12%;
+   }
+}
 @media screen and (max-width: 1440px){
    .item-1{
       width: 16%;
@@ -123,27 +128,27 @@ body{
       width: 10%;
    }
    .ruso{
-      top:459px !important;
+      top:459px;
    }
    .corazon_1 {
-      top: 458px !important;
+      top: 458px;
    }
    .carro {
-      top: 523px !important;
+      top: 523px;
    }
    .semaforo {
-      top: 382px !important;
+      top: 382px;
    }  
    .corazon_2 {
-      top: 450px !important;
+      top: 450px;
    }
    .ring {
-      top: 387px !important;
+      top: 387px;
    }
    .puerta {
-      top: 375px !important;
+      top: 375px;
    }
    .carro_2 {
-      bottom: -38px !important;
+      bottom: -38px;
    }
 }
