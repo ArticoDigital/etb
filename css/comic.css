@@ -34,6 +34,69 @@
 	}
 }
 @media screen and (max-width:620px){
+	section.actividad{
+		background-size: cover;
+	}
+	section.actividad > .col-l{
+		background: url(../images/cuadro-2.png) center top no-repeat !important;
+		background-size: 100% !important;
+		display: block !important;
+	    width: 90% !important;
+	    height: 429px !important;
+	    margin: auto !important;
+	    padding-top: 250px !important;
+	    background-position-y: 240px !important;
+	}
+	section.actividad > .col-l > h2{
+		font-size: 20px !important;
+	}
+	section.actividad > .col-l > p{
+		width: 73% !important;
+   	 	margin: 7% auto !important;
+   	 	font-size: 13px !important;
+	}
+	section.actividad > .col-l li{
+		font-size: 15px !important;
+	}
+	section.actividad > .col-r{
+		background: url(../images/cuadro-1.png) center top no-repeat !important;
+		background-size: 90% !important;
+		display: block !important;
+	    position: absolute !important;
+	    top: 0 !important;
+	    height: 240px !important;
+	    width: 96% !important;
+	    margin: auto !important;
+	}
+	section.actividad > .col-r > .texto{
+		margin: 21% auto !important;
+	}
+	section.actividad > .col-r > .texto > h2{
+		font-size: 20px !important;
+   		margin: 0 auto !important;
+	}
+	section.actividad > .col-r > .texto > li{
+		font-size: 15px !important;
+	}
+	section.actividad > .col-r > img{
+		display: none !important;
+	}
+	section.actividad3 > .col-r > .texto > p{
+		font-size: 16px !important;
+	}
+	section.actividad > .col-l > .pregunta > h2{
+		font-size: 20px !important;
+	}
+	section.actividad3 > .col-l > .pregunta > li{
+		font-size: 15px !important;
+	}
+	section.actividad3 > .col-l > .pregunta > li > span{
+		width: 20px !important;
+		height: 20px !important;
+	}
+	section.actividad3 > .col-l > .pregunta > p{
+		font-size: 16px !important;
+	}
 	.fp-tableCell{
         overflow-y: scroll; 
     }
