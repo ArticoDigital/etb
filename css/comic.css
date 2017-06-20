@@ -45,6 +45,10 @@
     	left: 5px !important;
     	border-width: 24.5px 20px 24.5px 0 !important;
     }
+    .comic1-portada > img{
+    	width: 280% !important;
+    	margin-left: -160%;
+    }
     .comic1 > .row1{
         display: block !important;
         width: 100% !important;
@@ -57,7 +61,11 @@
     }
     .comic1, .comic2, .comic3{
         background-size: cover !important;
-        height: 110% !important;
+        height: 130% !important;
+    }
+    .comic2-portada > img{
+    	width: 280% !important;
+    	margin-left: -160%;
     }
     .comic2 > .row1{
     	width: 85% !important;
@@ -73,6 +81,10 @@
     .comic2 > .row2 > img{
     	width: 97% !important;
     }
+    .comic3-portada > img{
+    	width: 280% !important;
+    	margin-left: -160%;
+    }
     .comic3 > .row1{
     	display: block !important;
     	width: 84% !important;
@@ -82,6 +94,9 @@
     	display: block !important;
     	width: 84% !important;
     	margin: auto !important;
+    }
+    .comic4, .comic5, .comic6{
+    	height: 112% !important;
     }
     .comic4 > .row1 {
 	    display: block !important;
@@ -109,6 +124,9 @@
 		display: block !important;
 		width: 100% !important;
 		margin-left: 0 !important;
+	}
+	.comic7{
+		height: 160% !important;
 	}
 	.comic7 > .row1{
 		width: 85% !important;
@@ -153,6 +171,9 @@
 		width: 95% !important;
 		    margin-left: -18% !important;
 	}
+	.comic9{
+		height: 120% !important;
+	}
 	.comic9 > .row1 {
 	    width: 85% !important;
 	    margin: auto !important;
@@ -195,9 +216,15 @@
 	    z-index: 3;
 	    position: relative;
 	}
-
-
-}
+	.btn-volver{
+		background-size: 60% !important;
+	    margin: 40px auto 0;
+	    position: relative !important;
+	}
+	.btn-volver:hover{
+		background-size: 60% !important;
+	}
+}/*fin media query 600*/
 	.hidden{
 		display: none;
 	}
