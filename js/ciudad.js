@@ -45,10 +45,10 @@ $('#Parallax-content').bind('touchmove',function(e){
  	});
       e.preventDefault(); 
        var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-	   var amountMovedXm = touch.pageX *  ( ww - 980 ) / ww  ;  
+	   var amountMovedXm = touch.pageX *  ( ww - 3223 ) / ww  ;  
 	   var amountMovedYm = (touch.pageY * ( wh - 640 ) / wh);
 	   
-	   var amountMovedX1m = touch.pageX *  ( ww - 980 ) / (ww/1.1)  ; 
+	   var amountMovedX1m = touch.pageX *  ( ww - 3223 ) / (ww/1.1)  ; 
 	
 	   $(this).css('background-position', amountMovedXm + 'px ');
 	   $('.items').css('transform', 'translateX('+ amountMovedX1m + 'px)');
