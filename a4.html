@@ -1,6 +1,9 @@
 <!-- COMIC VOCACION DEL SERVICIO -->
 <script type="text/javascript">
 	$(document).ready(function() {
+		if($('html').hasClass('fp-enabled')){
+	    $.fn.fullpage.destroy('all');
+		}
 		$('#fullpage').fullpage({
 				anchors: ['Comic', 'secondPage', '3rdPage'],
 				sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
@@ -11,6 +14,7 @@
 				afterResponsive: function(isResponsive){
 			}
 		});
+			
 	});
 </script>
 <div class="inner_content"  style="margin:0px;">
