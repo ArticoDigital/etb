@@ -83,6 +83,9 @@
 	section.actividad > .col-r > img{
 		display: none !important;
 	}
+	section.actividad2 > .col-r > .texto > p{
+		font-size: 16px !important;
+	}
 	section.actividad3 > .col-r > .texto > p{
 		font-size: 16px !important;
 	}
