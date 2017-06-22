@@ -39,6 +39,9 @@
 		position: fixed;
 		overflow: hidden;
 	}
+	section.actividad2{
+		position: relative !important;
+	}
 	section.actividad > .col-l{
 		background: url(../images/cuadro-2.png) center top no-repeat !important;
 		background-size: 100% !important;
