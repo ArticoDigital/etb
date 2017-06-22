@@ -1,4 +1,4 @@
-var debug=false;
+var debug=true;
 
 //var canvas, stage, exportRoot;
 var canvas=undefined;
