@@ -735,3 +735,10 @@
 		float: right;
     	margin-right: 20%;
 	}
+	span.ok {
+	    color: #e46710;
+	    cursor: pointer;
+	}
+	span.ok:hover{
+		color: #058ebd;
+	}
