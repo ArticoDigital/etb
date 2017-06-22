@@ -36,6 +36,8 @@
 @media screen and (max-width:620px){
 	section.actividad{
 		background-size: cover;
+		position: fixed;
+		overflow: hidden;
 	}
 	section.actividad > .col-l{
 		background: url(../images/cuadro-2.png) center top no-repeat !important;
