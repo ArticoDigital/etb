@@ -191,3 +191,81 @@ body{
       bottom: -38px;
    }
 }
+@media screen and (max-height: 1024px){
+   .ruso{
+      top:587px !important;
+   }
+   .corazon_1 {
+      top: 586px !important;
+   }
+   .carro {
+      top: 651px !important;
+   }
+   .semaforo {
+      top: 510px !important;
+   }
+   .corazon_2 {
+      top: 578px !important;
+   }
+   .ring {
+      top: 515px !important;
+   }
+   .puerta {
+      top: 503px !important;
+   }
+   .carro_2 {
+      bottom: 90px !important;
+   }
+}
+@media screen and (max-height: 900px){
+   .ruso {
+      top: 574px !important;
+   }
+   .corazon_1 {
+      top: 573px !important;
+   }
+   .carro {
+      top: 638px !important;
+   }
+   .semaforo {
+      top: 497px !important;
+   }
+   .corazon_2 {
+      top: 565px !important;
+   }
+   .ring {
+      top: 502px !important;
+   }
+   .puerta {
+      top: 490px !important;
+   }
+   .carro_2 {
+      bottom: 76px !important; 
+   }
+}
+@media screen and (max-height: 768px){
+   .ruso {
+      top: 508px !important;
+   }
+   .corazon_1 {
+      top: 507px !important;
+   }
+   .carro {
+      top: 572px !important;
+   }  
+   .semaforo {
+      top: 431px !important;
+   }
+   .corazon_2 {
+      top: 499px !important;
+   }
+   .ring {
+      top: 436px !important;
+   }
+   .puerta {
+      top: 424px !important;
+   }
+   .carro_2 {
+      bottom: 10px !important;
+   }
+}    
