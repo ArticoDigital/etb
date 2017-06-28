@@ -377,7 +377,7 @@
 	.comic8 > .row2{
 		display: block !important;
 	    width: 60% !important;
-	    margin: auto;
+	    margin: auto !important;
 	}
 	.comic9 > .row1{
 		text-align: center !important;
