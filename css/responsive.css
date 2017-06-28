@@ -205,3 +205,103 @@
     padding: 70px 0;
     }
 }
+@media screen and (max-width: 768px){
+    .intro > .content{
+        height: 1280px;
+    }
+    .intro > .content > .bocadillo1{
+        display: block;
+        margin: 0 0 0 41px;
+        float: left;
+    }
+    .intro img{
+        display: block;
+        margin: 0 0 0 73px;
+        width: 80% !important;
+        position: relative;
+        top: -90px;
+        float: left;
+    }
+    .intro > .content > .bocadillo2{
+        display: block;
+        margin: auto;
+        position: relative;
+        top: -270px;
+        float: right;
+    }
+    .intro > .content > .btn-entrar{
+        display: block;
+        margin: 0;
+        position: absolute;
+        bottom: 58px;
+        right: 0;
+    }
+    .bottom{
+        background-position-y: 0px;
+        left: 0;
+        width: 100%;
+        background-position-x: -70px;
+    }
+    .bottom p{
+        margin: 75px auto;
+        width: 89%;
+        padding: 0;
+    }
+    .bocadillo-sug{
+        background: url(../images/bocadillo-sug-mov.png) no-repeat;
+        background-size: 74%;
+        background-position: 90% 2%
+    }
+    .bocadillo-sug img{
+        width: 60%;
+        position: absolute;
+        bottom: 0;
+    }
+    .bocadillo-sug > p{
+        position: absolute;
+        right: 110px;
+        font-size: 15px;
+    }
+    .bocadillo-sug > p > span{
+        width: 30px;
+        height: 25px;
+        background-size: 80%;
+    }
+    .btn-next{
+        position: absolute;
+        bottom: -110px;
+        width: 100%;
+        right: -110px;
+    }
+    .bocadillo-test{
+        background: url(../images/bocadillo-test-mov.png) no-repeat;
+        background-size: 85%;
+        background-position-x: 50%;
+        background-position-y: 2%;
+    }
+    .bocadillo-test img{
+        position: absolute;
+        right: 0;
+        width: 60%;
+        margin: 0;
+        bottom: 0;
+    }
+    .bocadillo-test h2{
+        width: 100%;
+        text-align: center;
+    }
+    .bocadillo-test p{
+        width: 60%;
+    }
+    #falso{
+        position: relative;
+        z-index: 10;
+    }
+    #verdadero{
+        position: relative;
+        z-index: 10;
+    }
+    #modal{
+        left: 30%;
+    }
+}
