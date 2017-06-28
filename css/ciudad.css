@@ -191,30 +191,56 @@ body{
       bottom: -38px;
    }
 }
-@media screen and (max-height: 1024px){
+@media screen and (max-height: 1025px){
    .ruso{
-      top:587px !important;
+      top:601px !important;
    }
    .corazon_1 {
-      top: 586px !important;
+      top: 600px !important;
    }
    .carro {
-      top: 651px !important;
+      top: 665px !important;
    }
    .semaforo {
-      top: 510px !important;
+      top: 523px !important;
    }
    .corazon_2 {
-      top: 578px !important;
+      top: 592px !important;
    }
    .ring {
-      top: 515px !important;
+      top: 529px !important;
    }
    .puerta {
-      top: 503px !important;
+      top: 517px !important;
    }
    .carro_2 {
-      bottom: 90px !important;
+      bottom: 104px !important;
+   }
+}
+@media screen and (max-width: 1280px) and (max-height: 1024px){
+   .ruso{
+      top:587px;
+   }
+   .corazon_1 {
+      top: 586px;
+   }
+   .carro {
+      top: 651px ;
+   }
+   .semaforo {
+      top: 510px ;
+   }
+   .corazon_2 {
+      top: 578px ;
+   }
+   .ring {
+      top: 515px ;
+   }
+   .puerta {
+      top: 503px ;
+   }
+   .carro_2 {
+      bottom: 90px ;
    }
 }
 @media screen and (max-height: 900px){
