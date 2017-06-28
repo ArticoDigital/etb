@@ -296,6 +296,132 @@
 		background-size: 60% !important;
 	}
 }/*fin media query 600*/
+@media screen and (max-width: 768px){
+	.comic1-portada img{
+		width: 205% !important; 
+	    margin-left: -105%;
+	}
+    .comic4 > .row1{
+        display: block !important;
+	    margin: auto !important;
+	    width: 49% !important;
+    }
+    .comic4 > .row2{
+    	display: block !important;
+	    margin: auto !important;
+	    width: 49% !important;
+    }
+    .comic5 > .row1 > .img1{
+    	display: block;
+	    width: 75% !important;
+	    margin: auto;
+	}
+	.comic5 > .row1 > .img2 {
+	    width: 66.4% !important;
+	}
+	.comic5 > .row2 > .img1{
+		display: block;
+	    margin: auto;
+	    width: 80% !important;
+	}
+	.comic6 > .row1{
+		display: block !important;
+	    margin: auto;
+	    width: 75% !important;
+	}
+	.comic6 >.row2{
+		display: block !important;
+	    width: 70% !important;
+	    margin: auto !important;
+	}
+	.comic2-portada img{
+		width: 205% !important; 
+	    margin-left: -105%;
+	}
+	.comic7, .comic8, .comic9, .comic10, .comic11{
+		overflow: scroll !important;
+	}
+	.comic7 > .row1 > figure.col-l{
+		display: block !important;
+	    width: 68% !important;
+	    margin: auto;
+	}
+	.comic7 > .row1 > figure.col-r{
+		display: block !important;
+	    margin: auto;
+	    width: 67% !important;
+	}
+	.comic7 > .row1 > .col-r > .img3{
+		float: right;
+    	margin-top: 6% !important;
+	}
+	.comic7 > .row2{
+		width: 60% !important;
+    	text-align: left !important;
+	}
+	.comic7 > .row2 > .img1{
+		width: 87% !important;
+	}
+	.comic7 > .row2 > .img2{
+		width: 98% !important; 
+	}
+	.comic7 > .row2 > .img3{
+		width: 95% !important;
+    	float: right;
+	}
+	.comic8 > .row1{
+		display: block !important;
+	    margin: auto;
+	    width: 90% !important;
+	}
+	.comic8 > .row2{
+		display: block !important;
+	    width: 60% !important;
+	    margin: auto;
+	}
+	.comic9 > .row1{
+		text-align: center !important;
+	}
+	.comic9 > .row1 >.img1{
+		width: 90% !important;
+	}
+	.comic9 > .row1 >.img2{
+		width: 90% !important;
+	}
+	.comic9 > .row2{
+		text-align: center !important;
+	    margin: auto !important;
+	}
+	.comic9 > .row2 > .img1{
+		width: 90% !important;
+	}
+	.comic9 > .row2 > .img2{
+		width: 90% !important;
+	}
+	.comic10 > .row1 > .img1{
+		display: block;
+	    width: 32% !important;
+	    margin: auto !important;
+	    float: right;
+	}
+	.comic10 > .row1 >.img2{
+		width: 90% !important;
+	    margin: auto;
+	    display: block;
+	}
+	.comic10 > .row2{
+		margin: auto !important;
+    	width: 76% !important;
+	}
+	.comic10 > .row2 > .img1{
+		display: block;
+	    width: 39% !important;
+	    margin: auto !important;
+	}
+	.comic10 > .row2 > .img2{
+		width: 57% !important;
+	}
+}/*fin media query 768*/
 	.hidden{
 		display: none;
 	}
