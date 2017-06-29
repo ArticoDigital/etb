@@ -205,7 +205,7 @@
     padding: 70px 0;
     }
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) and (min-width: 620px){
     .intro > .content{
         height: 1280px;
     }

@@ -36,8 +36,7 @@
 @media screen and (max-width:620px){
 	section.actividad{
 		background-size: cover;
-		position: fixed;
-		overflow: hidden;
+
 	}
 	section.actividad2{
 		position: relative !important;
@@ -296,7 +295,7 @@
 		background-size: 60% !important;
 	}
 }/*fin media query 600*/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) and (min-width: 650px) {
 	.comic1-portada img{
 		width: 205% !important; 
 	    margin-left: -105%;
@@ -420,6 +419,105 @@
 	}
 	.comic10 > .row2 > .img2{
 		width: 57% !important;
+	}
+	.comic3-portada img{
+		width: 205% !important; 
+	    margin-left: -105%;
+	}
+	.comic1, .comic2, .comic3{
+		overflow: scroll;
+	}
+	.comic1 > .row1{
+		display: block !important;
+	    width: 90% !important;
+	    margin: auto;
+	}
+	.comic1 > .row1 > .img2{
+		position: absolute !important;
+	    bottom: -840px;
+	    margin: 0 0 10px 0 !important;
+	    left: 70px;
+	}
+	.comic1 > .row2{
+		display: block !important;
+	    margin: auto !important;
+	    width: 60% !important;
+	}
+	.comic2 > .row1{
+		text-align: center !important;
+	}
+	.comic2 > .row1 > .img1{
+		width: 90% !important;
+	}
+	.comic2 > .row1 > .img2{
+		width: 90% !important;
+	}
+	.comic2 > .row2{
+		text-align: center !important;
+	}
+	.comic2 > .row2 > .img1{
+		width: 90% !important;
+	}
+	.comic2 > .row2 > .img2{
+		width: 90% !important;
+	}
+	.comic3 > .row1{
+		display: block !important; 
+	    width: 50% !important;
+	    margin: auto;
+	}
+	.comic3 > .row2{
+		display: block !important;
+	    margin: auto !important;
+	    width: 61% !important;
+	}
+	section.actividad{
+		height: 1280px;
+    	background-size: cover !important;
+	}
+	section.actividad > .col-l{
+		background: url(../images/cuadro-2.png) center top no-repeat !important;
+		height: 960px !important;
+		position: absolute;
+	    top: 40px;
+	    margin: 0;
+	    padding: 0;
+	    width: 100% !important;
+   		background-size: 90% !important;
+	}
+	section.actividad > .col-r{
+		position: absolute;
+	    top: 0;
+	    margin: 0 auto !important;
+	    padding: 0;
+	    width: 100% !important;
+	    background-image: none !important;
+	    height: 0 !important;
+	}
+	section.actividad > .col-r > .texto{
+		width: 100% !important;
+		margin: 20% auto 0 !important;
+	}
+	section.actividad > .col-r > img{
+		display: none;
+	}
+	section.actividad > .col-l > h2{
+	    padding: 30% 0px 0px !important;
+	}
+	#modal > p ,#modal-bien > p{
+		font-size: 45px !important;
+	}
+	#modal-bien{
+		    left: 27%;
+	}
+	.pregunta{
+		margin-top: 190px !important;
+	}
+	section.actividad3 > .col-r > .texto{
+		    width: 70% !important;
+	}
+	#modal-incorrecto , #modal-correcto{
+		    left: 27%;
 	}
 }/*fin media query 768*/
 	.hidden{
