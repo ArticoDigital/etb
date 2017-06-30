@@ -17,11 +17,11 @@
 		</div>
 		<div class="items">
 			<img src="images/heroe-ciudad-1.png" alt="" class="item-1"> 
-			<img src="images/icon-vocacion-servicio.png" alt="" class="item-2 grayscale">
-			<img src="images/icon-experiencia-servicio.png" alt="" class="item-3 grayscale">
+			<img id="menu_0" src="images/icon-vocacion-servicio.png" alt="" class="item-2">
+			<img id="menu_1" src="images/icon-experiencia-servicio.png" alt="" class="item-3 grayscale">
 			<img src="images/empleado-etb.png" alt="" class="item-4">
-			<img src="images/icon-trio.png" alt="" class="item-5 grayscale">
-			<img src="images/icon-actividades.png" alt="" class="item-6 grayscale">
+			<img id="menu_2" src="images/icon-trio.png" alt="" class="item-5 grayscale">
+			<img id="menu_3" src="images/icon-actividades.png" alt="" class="item-6 grayscale">
 			<img src="images/obrero-etb.png" alt="" class="item-7">
 		</div>
 	</div>
@@ -59,24 +59,36 @@
     });
     $('.item-3').on('click' , function(e){
         e.preventDefault();
-        console.log(page);
-        page = 5;
-        goToPage(page);
-        document.location.hash = "pagina_" + page; 
+        if($( this ).hasClass( "grayscale" )){
+        	mensajeprevio();
+        }else{
+	        console.log(page);
+	        page = 5;
+	        goToPage(page);
+	        document.location.hash = "pagina_" + page; 
+    	}
     });
     $('.item-5').on('click' , function(e){
         e.preventDefault();
-        console.log(page);
-        page = 6;
-        goToPage(page);
-        document.location.hash = "pagina_" + page; 
+        if($( this ).hasClass( "grayscale" )){
+        	mensajeprevio();
+        }else{
+	        console.log(page);
+	        page = 6;
+	        goToPage(page);
+	        document.location.hash = "pagina_" + page; 
+    	}
     });
     $('.item-6').on('click' , function(e){
         e.preventDefault();
-        console.log(page);
-        page = 7;
-        goToPage(page);
-        document.location.hash = "pagina_" + page; 
+        if($( this ).hasClass( "grayscale" )){
+        	mensajeprevio();
+        }else{
+	        console.log(page);
+	        page = 7;
+	        goToPage(page);
+	        document.location.hash = "pagina_" + page;
+	    } 
     });
 	 $('#soundicon').on('click', function(e) {
         var bksound = document.getElementById("soundbackground");

@@ -383,9 +383,9 @@ function goToPage(currentPage) {
             
             ScormProcessSetValue("cmi.location", currentPage); //Escribe el currentpage en el location del scorm
             
-            showcurrentpage(); //Muestra la pagina actual en al usuario.
+            //showcurrentpage(); //Muestra la pagina actual en al usuario.
             setmenu_states();  //Actualiza los estados del menú de acuerdo a paginas visitadas , guardado en suspend_data
-            set_actual_menu(currentPage);
+            //set_actual_menu(currentPage);
             
             //cmi.progress_measure  o cmi.progress_measure
           
@@ -417,6 +417,16 @@ function preloadhide() {
    
    }
     
+}
+
+function mensajeprevio(){
+     alerta="Debes ver contenido previo en la ciudad para poder ver este contenido.";
+                    swal({
+                        title: "Aviso",
+                        text: alerta,
+                        type: "info",
+                        confirmButtonText: "Aceptar"
+                        }); 
 }
       
 
@@ -679,35 +689,18 @@ function setmenu_states(){
     var porcentaje=0;
     var comicsvistos=0;
     //$('.item-6').css('z-index',"10000");
-    $('.item-6').css('display',"none");
+    //$('.item-6').css('display',"none");
     
     
     for(var i=0; i<array_menu.length-1; i++){
         //if(parseInt(suspend_data_visited[i],10)==1){
-
+        if(parseInt(suspend_data_visited[array_menu[i]],10)==1){
+            j=i+1; 
+            $('#menu_'+j).removeClass('grayscale');
+        }
         comicsvistos+=parseInt(suspend_data_visited[array_menu[i]],10);
 
-        //}
-        /*ini=array_menu[i];
-        if((i+1)>=array_menu.length){
-            fin=total_pages;
-        }else{
-            fin=array_menu[i+1];
-        }
-        var intervalosuma=suma(ini, fin, suspend_data_visited);
-        var diferencia=fin-ini;
-
-        porcentaje=intervalosuma*100/diferencia;
-        var porcentajeint=parseInt(porcentaje);
-
- 		$('#progreso_'+i).css("width",porcentaje+"%");
- 		$('#progreso_'+i).text(porcentajeint+"%");
-
- 		if(porcentajeint==100){
- 			$('#progreso_'+i).addClass("barraverde");
-
- 		} 
-        */       
+            
     }    
     //alert( parseInt(suspend_data_visited[array_menu[array_menu.length-1]]));
     //alert(suspend_data_visited[array_menu[array_menu.length-1]]);
@@ -715,6 +708,7 @@ function setmenu_states(){
     console.log(comicsvistos);
     if(comicsvistos==3){
         if(parseInt(suspend_data_visited[array_menu[array_menu.length-1]])==0){
+            //$('#menu_'+3).removeClass('grayscale');
             alertacalificion="Has terminado de ver los contenidos, busca las actividades de aprendizaje en la ciudad.";
         
             
@@ -726,8 +720,8 @@ function setmenu_states(){
                                 });
         }
 
-        $('.item-6').css('z-index',"10000");
-        $('.item-7').css('width',"5%");
+        //$('.item-6').css('z-index',"10000");
+        //$('.item-7').css('width',"5%");
         $('.item-6').css('display',"block");
     }
 }
