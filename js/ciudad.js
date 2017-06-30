@@ -1,7 +1,9 @@
 $(document).ready(function($){
 var ww = $(window).width();
 var wh = $(window).height();
-
+   if ( ww < 768 ) {
+    return true;
+    };
   $('#Parallax-content').mousemove(function(e) {
      var amountMovedX = e.pageX *  ( ww - 3223 ) / ww  ;  
      var amountMovedY = (e.pageY * ( wh - 974 ) / wh);

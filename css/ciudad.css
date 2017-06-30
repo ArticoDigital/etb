@@ -3,6 +3,7 @@
    background-size: 3223px;
    height: 100vh;
    background-repeat: no-repeat;
+   background-position-y: 0px !important;
 }
 body{
    overflow: hidden;
@@ -111,6 +112,23 @@ body{
    left: 56.54%;
    top: 517px;
 }
+@media screen and (max-width: 767px){
+   #Parallax-content{
+      width: 3223px !important;
+      background-position-y: center !important;
+      overflow-y: hidden !important;
+      position: absolute !important;
+   }
+   .item-sem{
+      display: none !important;
+   }
+   .items{
+      position: absolute !important;
+   }
+   .item-7 {
+      right: 480px !important;
+   }
+}
 @media screen and (max-width: 400px){
    .item-1, .item-4{
       width: 12% !important;
@@ -129,30 +147,6 @@ body{
    }
    .item-7 {
       width: 8% !important;
-   }
-   .ruso {
-      top: 425px !important;
-   }
-   .corazon_1 {
-      top: 424px !important;
-   }
-   .carro {
-      top: 489px !important;
-   }
-   .semaforo {
-      top: 349px !important;
-   }
-   .corazon_2 {
-      top: 416px !important;
-   }
-   .ring {
-      top: 353px !important;
-   }
-   .puerta {
-      top: 341px !important;
-   }
-   .carro_2 {
-      bottom: -72px !important;
    }
 }
 @media screen and (max-width: 1440px){
@@ -201,54 +195,54 @@ body{
 }
 @media screen and (max-height: 1025px){
    .ruso{
-      top:601px !important;
+      top:601px;
    }
    .corazon_1 {
-      top: 600px !important;
+      top: 600px;
    }
    .carro {
-      top: 665px !important;
+      top: 665px ;
    }
    .semaforo {
-      top: 523px !important;
+      top: 523px ;
    }
    .corazon_2 {
-      top: 592px !important;
+      top: 592px ;
    }
    .ring {
-      top: 529px !important;
+      top: 529px ;
    }
    .puerta {
-      top: 517px !important;
+      top: 517px ;
    }
    .carro_2 {
-      bottom: 104px !important;
+      bottom: 104px;
    }
 }
 @media screen and (max-width: 1280px) and (max-height: 1024px){
    .ruso{
-      top:587px;
+      top:611px;
    }
    .corazon_1 {
-      top: 586px;
+      top: 610px;
    }
    .carro {
-      top: 651px ;
+      top: 675px ;
    }
    .semaforo {
-      top: 510px ;
+      top: 534px ;
    }
    .corazon_2 {
-      top: 578px ;
+      top: 602px ;
    }
    .ring {
-      top: 515px ;
+      top: 539px ;
    }
    .puerta {
-      top: 503px ;
+      top: 527px ;
    }
    .carro_2 {
-      bottom: 90px ;
+      top: 746px;
    }
 }
 @media screen and (max-height: 900px){
