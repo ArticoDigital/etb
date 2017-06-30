@@ -195,28 +195,28 @@ body{
 }
 @media screen and (max-height: 1025px){
    .ruso{
-      top:601px;
+      top:611px;
    }
    .corazon_1 {
-      top: 600px;
+      top: 610px;
    }
    .carro {
-      top: 665px ;
+      top: 675px ;
    }
    .semaforo {
-      top: 523px ;
+      top: 533px ;
    }
    .corazon_2 {
-      top: 592px ;
+      top: 602px ;
    }
    .ring {
-      top: 529px ;
+      top: 539px ;
    }
    .puerta {
-      top: 517px ;
+      top: 527px ;
    }
    .carro_2 {
-      bottom: 104px;
+      bottom: 114px;
    }
 }
 @media screen and (max-width: 1280px) and (max-height: 1024px){
@@ -273,27 +273,27 @@ body{
 }
 @media screen and (max-height: 768px){
    .ruso {
-      top: 508px !important;
+      top: 611px !important;
    }
    .corazon_1 {
-      top: 507px !important;
+      top: 610px !important;
    }
    .carro {
-      top: 572px !important;
+      top: 675px !important;
    }  
    .semaforo {
-      top: 431px !important;
+      top: 534px !important;
    }
    .corazon_2 {
-      top: 499px !important;
+      top: 602px !important;
    }
    .ring {
-      top: 436px !important;
+      top: 539px !important;
    }
    .puerta {
-      top: 424px !important;
+      top: 527px !important;
    }
    .carro_2 {
-      bottom: 10px !important;
+      bottom: -114px !important;
    }
 }    
