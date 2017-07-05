@@ -149,8 +149,8 @@
     }
     .bocadillo-sug > p{
             width: 70%;
-    margin-top: 74px;
-        margin-left: -111px;
+    margin-top: 52px;
+        margin-left: -80px;
     line-height: 10px;
     font-size: 10px;
     }
@@ -161,11 +161,11 @@
     }
     .btn-next > a{
         font-size: 23px;
-    margin-top: -290px;
-    background-size: 50%;
-    margin-right: 0px;
-    float: left;
-    margin-left: 136px;
+        margin-top: -330px;
+        background-size: 50%;
+        margin-right: 0px;
+        float: left;
+        margin-left: 96px;
     }
     .bocadillo-test{
         background: url(../images/bocadillo-test-mov.png) no-repeat;
@@ -178,17 +178,17 @@
         margin-top: 274px;
     }
     .bocadillo-test h2{
-            width: 35%;
-    font-size: 20px;
-    margin: auto;
-    display: block;
-    padding: 60px 0 0;
-    text-align: center;
+        width: 35%;
+        font-size: 18px;
+        margin: auto;
+        display: block;
+        padding: 38px 0 0;
+        text-align: center;
     }
     .bocadillo-test p {
     width: 72%;
-    margin: 10px auto 0;
-    font-size: 15px;
+    margin: 5px auto 0;
+    font-size: 13px;
     }   
     #falso {
     display: block;

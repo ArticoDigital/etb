@@ -581,7 +581,7 @@ section.test{
 @media screen and (max-width: 400px){
     #modal, #modal-bien, #modal-incorrecto, #modal-correcto {
         background-size: 45% !important;
-        left: 5% !important;
+        left: -4% !important;
     }
     #close{
       margin-right: 28% !important;
